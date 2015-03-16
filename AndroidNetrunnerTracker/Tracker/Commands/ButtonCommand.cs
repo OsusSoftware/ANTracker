@@ -15,7 +15,7 @@ namespace Tracker.Commands
         }
         public bool CanExecute(object parameter)
         {
-            bool result = false;
+            bool result = true;
 
             if (_whenToExecute != null)
             {

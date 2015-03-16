@@ -97,6 +97,15 @@ namespace Tracker.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Corporation.
+        /// </summary>
+        public static string CorporationFactionName {
+            get {
+                return ResourceManager.GetString("CorporationFactionName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Faction.
         /// </summary>
         public static string FactionPageTitle {
@@ -129,6 +138,15 @@ namespace Tracker.Resources {
         public static string RunnerDescription {
             get {
                 return ResourceManager.GetString("RunnerDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Runner.
+        /// </summary>
+        public static string RunnerFactionName {
+            get {
+                return ResourceManager.GetString("RunnerFactionName", resourceCulture);
             }
         }
     }

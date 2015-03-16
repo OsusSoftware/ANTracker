@@ -15,7 +15,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="Transparent" DataContext="{Binding}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -51,29 +51,16 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <!--<ItemsControl x:Name="ContentPanel" 
-                          Grid.Row="1" 
-                          Margin="12,0,12,0"
-                          ItemsSource="{Binding Path=Factions}">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Faction}" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                        <TextBlock Text="{Binding Description}" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>-->
-        <Grid Grid.Row="1" Margin="12,0,12,0">
+        <Grid Grid.Row="1" Margin="12,0,12,0" DataContext="{Binding}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
-            <Button Grid.Row="0" Tag="Corporation" Click="Button_Click">
+            <Button Grid.Row="0" Tag="Corporation" Command="{Binding NavigateToFaction, Mode=OneWay}" CommandParameter="{Binding Tag, RelativeSource={RelativeSource Self}}">
                 <StackPanel>
                     <TextBlock 
-                        Text="Corporation" 
+                        Text="{Binding Path=LocalizedResources.CorporationFactionName, Source={StaticResource LocalizedStrings}}" 
                         Style="{StaticResource PhoneTextExtraLargeStyle}" />
                     <TextBlock 
                         Text="{Binding Path=LocalizedResources.CorporationDescription, Source={StaticResource LocalizedStrings}}"
@@ -81,10 +68,10 @@
                         Margin="40,0, 0, 0"/>
                 </StackPanel>
             </Button>
-            <Button Grid.Row="1" Tag="Runner">
+            <Button Grid.Row="1" Tag="Runner" Command="{Binding NavigateToFaction, Mode=OneWay}" CommandParameter="{Binding Tag, RelativeSource={RelativeSource Self}}">
                 <StackPanel>
                     <TextBlock 
-                        Text="Runner" 
+                        Text="{Binding Path=LocalizedResources.RunnerFactionName, Source={StaticResource LocalizedStrings}}" 
                         Style="{StaticResource PhoneTextExtraLargeStyle}" />
                     <TextBlock 
                         Text="{Binding Path=LocalizedResources.RunnerDescription, Source={StaticResource LocalizedStrings}}"

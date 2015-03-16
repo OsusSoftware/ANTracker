@@ -106,6 +106,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="TurnPage.xaml.cs">
+      <DependentUpon>TurnPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\FactionSelectorViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SampleDesignData\FactionSelectorViewModelData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TurnPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

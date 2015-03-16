@@ -11,7 +11,6 @@ namespace Tracker
         public MainPage()
         {
             FactionSelectorViewModel viewModel = new FactionSelectorViewModel();
-            viewModel.Initialize();
             this.DataContext = viewModel;
 
             InitializeComponent();

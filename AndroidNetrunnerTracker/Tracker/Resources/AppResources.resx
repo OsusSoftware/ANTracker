@@ -144,4 +144,10 @@
   <data name="RunnerDescription" xml:space="preserve">
     <value>Follow yourself.</value>
   </data>
+  <data name="CorporationFactionName" xml:space="preserve">
+    <value>Corporation</value>
+  </data>
+  <data name="RunnerFactionName" xml:space="preserve">
+    <value>Runner</value>
+  </data>
 </root>
