@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using Microsoft.Phone.Controls;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
-using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
-using Tracker.Resources;
+using Tracker.ViewModel;
 
 namespace Tracker
 {
@@ -16,11 +10,16 @@ namespace Tracker
         // Constructor
         public MainPage()
         {
+            FactionSelectorViewModel viewModel = new FactionSelectorViewModel();
+            viewModel.Initialize();
+            this.DataContext = viewModel;
+
             InitializeComponent();
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
+
 
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()

@@ -135,7 +135,13 @@
   <data name="AppBarMenuItemText" xml:space="preserve">
     <value>Menu Item</value>
   </data>
+  <data name="CorporationDescription" xml:space="preserve">
+    <value>You must follow.</value>
+  </data>
   <data name="FactionPageTitle" xml:space="preserve">
     <value>Select Faction</value>
+  </data>
+  <data name="RunnerDescription" xml:space="preserve">
+    <value>Follow yourself.</value>
   </data>
 </root>

@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    d:DataContext="{d:DesignData SampleDesignData/FactionSelectorViewModelData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -50,10 +51,50 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <ContentPresenter x:Name="ContentPanel" 
+        <!--<ItemsControl x:Name="ContentPanel" 
                           Grid.Row="1" 
-                          Margin="12,0,12,0">
-        </ContentPresenter>
+                          Margin="12,0,12,0"
+                          ItemsSource="{Binding Path=Factions}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Faction}" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                        <TextBlock Text="{Binding Description}" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>-->
+        <Grid Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Button Grid.Row="0" Tag="Corporation" Click="Button_Click">
+                <StackPanel>
+                    <TextBlock 
+                        Text="Corporation" 
+                        Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                    <TextBlock 
+                        Text="{Binding Path=LocalizedResources.CorporationDescription, Source={StaticResource LocalizedStrings}}"
+                        Style="{StaticResource PhoneTextSubtleStyle}"
+                        Margin="40,0, 0, 0"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Row="1" Tag="Runner">
+                <StackPanel>
+                    <TextBlock 
+                        Text="Runner" 
+                        Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                    <TextBlock 
+                        Text="{Binding Path=LocalizedResources.RunnerDescription, Source={StaticResource LocalizedStrings}}"
+                        Style="{StaticResource PhoneTextSubtleStyle}"
+                        Margin="40,0, 0, 0"/>
+                </StackPanel>
+
+            </Button>
+
+        </Grid>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
             aligned on common boundaries.  The image has a top margin of -32px to

@@ -88,6 +88,15 @@ namespace Tracker.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You must follow..
+        /// </summary>
+        public static string CorporationDescription {
+            get {
+                return ResourceManager.GetString("CorporationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Faction.
         /// </summary>
         public static string FactionPageTitle {
@@ -111,6 +120,15 @@ namespace Tracker.Resources {
         public static string ResourceLanguage {
             get {
                 return ResourceManager.GetString("ResourceLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Follow yourself..
+        /// </summary>
+        public static string RunnerDescription {
+            get {
+                return ResourceManager.GetString("RunnerDescription", resourceCulture);
             }
         }
     }
