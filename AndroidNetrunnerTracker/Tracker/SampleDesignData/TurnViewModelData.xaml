@@ -1,0 +1,13 @@
+﻿<vm:TurnViewModel
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:Tracker.ViewModel"
+    Name="Fake">
+
+    <vm:TurnViewModel.TurnProperties>
+        <vm:IncreaseDecreasePropertyViewModel PropertyName="One" Count="1"/>
+        <vm:IncreaseDecreasePropertyViewModel PropertyName="Two" Count="2"/>
+        <vm:IncreaseDecreasePropertyViewModel PropertyName="Three" Count="3"/>
+    </vm:TurnViewModel.TurnProperties>
+    
+</vm:TurnViewModel>

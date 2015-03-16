@@ -110,6 +110,8 @@
       <DependentUpon>TurnPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\FactionSelectorViewModel.cs" />
+    <Compile Include="ViewModel\IncreaseDecreasePropertyViewModel.cs" />
+    <Compile Include="ViewModel\TurnViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -167,6 +169,10 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Page Include="SampleDesignData\TurnViewModelData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
